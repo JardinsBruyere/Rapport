@@ -467,29 +467,29 @@
 <li>Cap projet: Page décrivant le projet, l'équipe ainsi que le contexte du projet</li>
 </ul>
 <h2 id="fonctionnement-de-la-partie-graphique">Fonctionnement de la partie graphique</h2>
-<p>Pour réaliser le graphique nous nous sommes appuyés sur le projet <a data-from-md title='https://www.amcharts.com/' href='https://www.amcharts.com/'>amcharts</a> où des démo sont disponibles <a data-from-md title='https://www.amcharts.com/demos/' href='https://www.amcharts.com/demos/'>ici</a> Nous utiliserons la partie line-graphe, voici un <a data-from-md title='https://www.amcharts.com/demos/line-graph/' href='https://www.amcharts.com/demos/line-graph/'>exemple</a> de son utilisation: <img src="../_resources/cdfd313ebbd043e6814293326542c63d.png" alt="b261900c20eda3dc33a4e65fbd7dac18.png"></p>
+<p>Pour réaliser le graphique nous nous sommes appuyés sur le projet <a data-from-md title='https://www.amcharts.com/' href='https://www.amcharts.com/'>amcharts</a> où des démo sont disponibles <a data-from-md title='https://www.amcharts.com/demos/' href='https://www.amcharts.com/demos/'>ici</a> Nous utiliserons la partie line-graphe, voici un <a data-from-md title='https://www.amcharts.com/demos/line-graph/' href='https://www.amcharts.com/demos/line-graph/'>exemple</a> de son utilisation: <img src="pic/cdfd313ebbd043e6814293326542c63d.png" alt="b261900c20eda3dc33a4e65fbd7dac18.png"></p>
 <p>Celui-ci est particulièrement complet, il permet de faire un focus sur une partie du graphique à l'aide de deux curseurs, l'axe des abscisses est réactif aux changements pour afficher périodiquement des dates sans le surcharger et le rendre illisible. De plus il supporte plusieurs graphes et intègre un outil permettant d'exporter le graphique en png ou autre...</p>
 <p>Voici un exemple de son implémentation dans notre projet :<br>
-<img src="../_resources/6ccfcf69f9594b01b00e34bd5058a0bf.png" alt="6973154e8ac26a8b91b6f1e4509ffedb.png"></p>
+<img src="pic/6ccfcf69f9594b01b00e34bd5058a0bf.png" alt="6973154e8ac26a8b91b6f1e4509ffedb.png"></p>
 <h2 id="fonctionnalités-liées-au-graphique">Fonctionnalités liées au graphique</h2>
 <p>A droite du graphique nous trouvons une zone nommée : <strong>&quot;Paramétrage graphique&quot;</strong>. Celle-ci se présente ainsi:<br>
-<img src="../_resources/5cfd3b33b1414275b330a1b1244ebc85.png" alt="5d749aeb8dc493c9557ea1ef01c40dd2.png"><br>
+<img src="pic/5cfd3b33b1414275b330a1b1244ebc85.png" alt="5d749aeb8dc493c9557ea1ef01c40dd2.png"><br>
 Nous avons 3 interactions possibles avec ce graphique:</p>
 <ul>
 <li>Dans un premier temps nous pouvons filtrer les capteurs que nous souhaitons afficher. Ici par exemple nous avons les filtres suivants disponibles:<br>
-<img src="../_resources/5f272f74e9354a6d8a858e98e0409058.png" alt="de25493ab78a31b80ace12a2dc1ffd63.png"> <img src="../_resources/d43963b7448b4c9bab4251d2e6a91746.png" alt="7e74b9fc5013b699052227a01b10d25a.png"><br>
+<img src="pic/5f272f74e9354a6d8a858e98e0409058.png" alt="de25493ab78a31b80ace12a2dc1ffd63.png"> <img src="pic/d43963b7448b4c9bab4251d2e6a91746.png" alt="7e74b9fc5013b699052227a01b10d25a.png"><br>
 Une fois que nous avons selectionné les catégories souhaitées il suffit de cliquer sur le bouton &quot;Filtrer&quot; qui actualisera la liste des capteurs disponibles correspondant aux champs renseignés. Voici un exemple:<br>
-<img src="../_resources/34ddd48bb02742a38db1a24ea310a2f9.png" alt="56d6bd77bb3dcb14e08b3d8dec367bdf.png"><br>
+<img src="pic/34ddd48bb02742a38db1a24ea310a2f9.png" alt="56d6bd77bb3dcb14e08b3d8dec367bdf.png"><br>
 Ici nous avons tous les capteurs de luminosité et de poireaux.</li>
 <li>La liste des capteurs disponibles est par défaut la liste complète des capteurs, celle-ci peut être modifiée grâce au filtre. Afin de créer un graphique, nous pouvons sélectionner l'ensemble des capteurs voulu ainsi que la période de date que nous souhaitons.</li>
 <li>Enfin une dernière catégorie permet de régler la précision du graphique, cela correspond à l'espace de temps entre 2 dates permettant de créer un graphique. Si par exemple nous sélectionnons &quot;une semaine&quot; alors le graphique commencera à la première date détectée et prendra la date de la semaine suivante.</li>
 </ul>
 <h2 id="page-dédition">Page d'édition</h2>
 <p>La page d'édition se découpe en 4 parties: les stations, les types de capteurs, les stations et les ajouts ou suppressions :<br>
-<img src="../_resources/8b1e9352e0834a10aa3a0e2031b38ad9.png" alt="a47691145082dfd43195fed6635fcbbb.png"></p>
+<img src="pic/8b1e9352e0834a10aa3a0e2031b38ad9.png" alt="a47691145082dfd43195fed6635fcbbb.png"></p>
 <p>Le fonctionnement de cette page est très simple, il s'agit d'une vue de la base de donnée où l'utlisateur peut modifier certaines valeurs. Une fois que les choix de ses valeurs ont été faites il peut appuyer sur le bouton &quot;Mettre à jour le serveur avec les nouvelles données&quot; qui permet d'envoyer toutes les modifications au serveur.</p>
 <p>Enfin nous trouvons des boutons permettant de supprimer ou d'ajouter des stations ou des types de capteurs, ceux-ci permettent de rajouter une courbe avec des valeurs par défaut dans la catégorie que nous voulons :<br>
-<img src="../_resources/b92861a51f6d46ebb26bf1f08b7203a0.png" alt="5700453e9b59e2cf1f86824573a4aebf.png"></p>
+<img src="pic/b92861a51f6d46ebb26bf1f08b7203a0.png" alt="5700453e9b59e2cf1f86824573a4aebf.png"></p>
 <h2 id="technologies">Technologies</h2>
 <p>Le graphique est alimenté par un script javascript executant des requetes fetch à un serveur rest. Ce serveur envoie alors des données qui sont lues et formatées afin de correspondre au format requis par amcharts.</p>
 </div></div>

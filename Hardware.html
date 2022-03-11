@@ -472,20 +472,20 @@ Nous avons à ce titre utilisé le microcontrôleur ESP32, paticulièrement rép
 </thead>
 <tbody>
 <tr>
-<td><img src="../_resources/2faa19c8c1724916987c339c3c115b41.png" width="100%" class="jop-noMdConv"/></td>
-<td><img src="../_resources/c8eb5501bd9a403c9a4125c01a64124e.png" width="75%" class="jop-noMdConv"/></td>
+<td><img src="pic/2faa19c8c1724916987c339c3c115b41.png" width="100%" class="jop-noMdConv"/></td>
+<td><img src="pic/c8eb5501bd9a403c9a4125c01a64124e.png" width="75%" class="jop-noMdConv"/></td>
 </tr>
 </tbody>
 </table>
 <h2 id="capteurs-utilisés">Capteurs utilisés</h2>
 <p>Voici trois capteurs low-costs approuvés pour l'utilisation dans la station.</p>
 <p>Capacitive Soil Moisture Sensor v1.2 /v2.0*<br>
-<img src="../_resources/5d7eace9c14e4cdbbd95da74737c671c.png" width="50%" class="jop-noMdConv"/><br>
+<img src="pic/5d7eace9c14e4cdbbd95da74737c671c.png" width="50%" class="jop-noMdConv"/><br>
 *note : Attention aux clones nombreux. Certains ne fonctionnent pas correctement, ou nécessitent une tension supérieure à 3.3V.</p>
 <p>SHT3X<br>
-<img src="../_resources/98a5a335e2624faba6338c5bd0019938.png" width="50%" class="jop-noMdConv"/></p>
+<img src="pic/98a5a335e2624faba6338c5bd0019938.png" width="50%" class="jop-noMdConv"/></p>
 <p>TCS3472<br>
-<img src="../_resources/d6e85a491b4548eb9e40304e62a2f38f.png" width="50%" class="jop-noMdConv"/></p>
+<img src="pic/d6e85a491b4548eb9e40304e62a2f38f.png" width="50%" class="jop-noMdConv"/></p>
 <p>Informations supplémentaires</p>
 <table>
 <thead>
@@ -577,7 +577,7 @@ Ces régulateurs sont un drain majeur d'énergie, car ils dissipent l'excès en 
 <p>Nous avons décidé d'opter pour les cellules LiFePO4. Au premier regard, ce choix semble peut-être contre intuitif étant donné que les autres batteries proposent une capacité cinq fois plus importante. Cependant, la tension par cellule correspondant <em>quasiment</em> à la tension d'alimentation de l'ESP32 nous permet d'éviter d'utiliser un régulateur de tension sans pour autant suralimenter le microcontrôleur.<br>
 D'autes caractéristiques, comme le profil de déchargement énergétique exceptionnellement stable et la sécurité de la batterie en cas d'incident.</p>
 <p>Profil de déchargement d'une batterie LiFePO4.<br>
-<img src="../_resources/97cfcd91477946f09cedba941bafc67a.png" width="75%" class="jop-noMdConv"/></p>
+<img src="pic/97cfcd91477946f09cedba941bafc67a.png" width="75%" class="jop-noMdConv"/></p>
 <h3 id="désactivation-du-second-coeur-de-lesp32">Désactivation du second coeur de l'ESP32</h3>
 <p>Ironiquement, le processeur dual-core Xtensa intégré au microcontrôleur est bien plus puissant que nécessite notre programme. Nous pouvons alors nous permettre de désactiver l'un des deux coeurs afin d'en réduire légèrement la consommation.</p>
 </div></div>

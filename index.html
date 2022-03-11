@@ -439,7 +439,24 @@
 				.joplin-checklist li:not(.checked)::before {
 					content:"\f0c8";
 				}
-.mermaid { background-color: white; width: 640px; }</style><div id="rendered-md"><h2 id="rapport-temporaire-sur-lavancement-du-cap-projet">Rapport temporaire sur l'avancement du cap projet</h2>
+.mermaid { background-color: white; width: 640px; }</style><div id="rendered-md"><style class="jop-noMdConv">
+	H1,H2,H3,img { 
+		text-align: center;
+		text-decoration: underline;
+	}
+	img{
+		 display: block;
+		 margin-left: auto;
+  		margin-right: auto;
+	}
+	tr,td{
+		text-align:center;;
+	}
+	p{
+		font-family: Georgia;
+	}
+</style>
+<h2 id="rapport-temporaire-sur-lavancement-du-cap-projet">Rapport temporaire sur l'avancement du cap projet</h2>
 <p>Le github contenant l'ensemble des codes sources est dispo <a data-from-md title='https://github.com/JardinsBruyere' href='https://github.com/JardinsBruyere'>ici</a></p>
 <p>Les différentes parties du projet sont disponibles ici :</p>
 <ul>
@@ -447,13 +464,14 @@
 <li><a data-from-md title='SiteWeb.html' href='SiteWeb.html'>Site web</a></li>
 <li><a data-from-md title='Mobile.html' href='Mobile.html'>Mobile</a></li>
 <li><a data-from-md title='Api.html' href='Api.html'>Api</a></li>
+<li><a data-from-md title='Hardware.html' href='Hardware.html'>Hardware</a></li>
 </ul>
 <h1 id="synthèse">Synthèse</h1>
 <h2 id="architechture">Architechture</h2>
-<p><img src="pic/fc88a26b01df4d6da812d79bfb0fbcda.png" alt="310acd07b20d5212a2613677a8802956.png"></p>
+<p><img src="../_resources/740b49c69dc04502b7d955aa1421e22a.png" alt="310acd07b20d5212a2613677a8802956.png"></p>
 <h2 id="résumé-du-fonctionnement-général">Résumé du fonctionnement général</h2>
-<p>Dans un premier temps le micro-controleur récuperera les valeurs des capteurs qu'il formatera sous forme de json pour les envoyer à la partie listener du serveur. Le serveur sauvegardera les données dans la base de donnée. Le serveur possède une interface d'API permettant de mettre à disposition les données pour le site web et l'application mobile.<br>
-Le site web permet de consulter et visualiser les données ou bien les modifier. L'application mobile permet quand à elle uniquement de visualiser les donnéees.</p>
+<p>Dans un premier temps le microcontrôleur récupère les valeurs des capteurs qu'il formate sous forme de JSON pour les envoyer à la partie listener du serveur. Le serveur sauvegarde ensuite les informations dans la base de donnée. Le serveur possède une interface d'API permettant de mettre à disposition les données pour le site web et l'application mobile.<br>
+Le site web permet de consulter et visualiser les données ou bien les modifier. L'application mobile permet quant à elle uniquement de visualiser les données.</p>
 <h2 id="technologies">Technologies</h2>
 <p>Liste des bibliothèques ou technologies utilisées:</p>
 <ul>
@@ -479,7 +497,7 @@ Le site web permet de consulter et visualiser les données ou bien les modifier.
 </li>
 </ul>
 <h2 id="remarques">Remarques:</h2>
-<p>Pour l'instant nous n'avons trouvé aucun bug, mineure ou majeure. Nous avons des fails de sécurité notamment le chemin /api/change du serveur qui pourrais être utilisé afin de faire des injections SQL.</p>
+<p>Pour l'instant nous n'avons trouvé aucun bug, mineur ou majeur. Nous avons des failles de sécurité notamment le chemin /api/change du serveur qui pourraient être utilisées afin de faire des injections SQL.</p>
 </div></div>
 					</body>
 				</html>

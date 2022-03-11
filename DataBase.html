@@ -440,9 +440,26 @@
 					content:"\f0c8";
 				}
 .mermaid { background-color: white; width: 640px; }</style><div id="rendered-md"><p>→<a data-from-md title='index.html' href='index.html'>Retour au menu ici</a>←</p>
+<style class="jop-noMdConv">
+	H1,H2,H3,img { 
+		text-align: center;
+		text-decoration: underline;
+	}
+	img{
+		 display: block;
+		 margin-left: auto;
+  		margin-right: auto;
+	}
+	tr,td{
+		text-align:center;;
+	}
+	p{
+		font-family: Georgia;
+	}
+</style>
 <h2 id="structure-de-la-base-de-donnée">Structure de la base de donnée</h2>
-<p>Voici le schema complet de la base de donnée que nous utilisons :<br>
-<img src="pic/6468701d1ae1492cba222bff4f8b647b.png" alt="a3da4bc1a4419dddb993999c33cb43a6.png"></p>
+<p>Voici le schema complet de la base de données que nous utilisons :<br>
+<img src="../_resources/de87edf6b30249bdbf68505ffcd9fd1a.png" alt="a3da4bc1a4419dddb993999c33cb43a6.png"></p>
 <p>Celle-ci est disponible <a data-from-md title='https://dbdiagram.io/d/621a018754f9ad109a254b40' href='https://dbdiagram.io/d/621a018754f9ad109a254b40'>ici</a></p>
 <h2 id="explication">Explication</h2>
 <p>Nous trouvons dans cette base de données 4 tables:</p>
@@ -450,16 +467,16 @@
 <li><u class="jop-noMdConv"> <strong>Sensor</strong> </u>: Table des capteurs
 <ul>
 <li><strong>Id</strong>: Numéro du capteur</li>
-<li><strong>Type</strong>: Fais référence à un type de capteur, ainsi nous pouvons ajouter un capteur à une catégorie. Nous pourrons par exemple dire &quot;Je souhaite que ce capteur soit référencé comme étant un capteur de température&quot;. Ceci aura ainsi pour effet de lui donner certaines caractérisques comme une unité par exemple</li>
+<li><strong>Type</strong>: Fait référence à un type de capteur, ainsi nous pouvons ajouter un capteur à une catégorie. Nous pourrons par exemple dire &quot;Je souhaite que ce capteur soit référencé comme étant un capteur de température&quot;. Ceci aura ainsi pour effet de lui donner certaines caractérisques comme une unité par exemple</li>
 <li><strong>DateAdded</strong>: Il s'agit de la date d'ajout du capteur à la base de donnée</li>
-<li><strong>Station</strong>: Fais référence à une station de plusieurs capteurs regroupés physiquement</li>
-<li><strong>Nom</strong>: Nom donnée au capteur, celui est d'abord définis par défaut mais peut être modifier par l'utilisateur</li>
+<li><strong>Station</strong>: Fait référence à une station de plusieurs capteurs regroupés physiquement</li>
+<li><strong>Nom</strong>: Nom donnée au capteur, celui est d'abord définit par défaut mais peut être modifié par l'utilisateur</li>
 </ul>
 </li>
 <li><u class="jop-noMdConv"> <strong>SensorReading</strong> </u>: Table des relevés des capteurs
 <ul>
 <li><strong>Id</strong>: Numéro du relevée</li>
-<li><strong>SensorId</strong>: Fais référence au capteur duquel parviens ce relevé</li>
+<li><strong>SensorId</strong>: Fait référence au capteur duquel parvient ce relevé</li>
 <li><strong>DateAdded</strong>: Date à laquelle le relevé à été ajouté à la base de donnée</li>
 <li><strong>Value</strong>: Valeur sans unité provenant du capteur</li>
 </ul>
@@ -467,7 +484,7 @@
 <li><u class="jop-noMdConv"> <strong>SensorTypes</strong> </u>: Table des types de capteurs
 <ul>
 <li><strong>Id</strong>: Numéro du type de capteur</li>
-<li><strong>Unit</strong>: Unité propre à ce type de capteur, par exemple &quot;°C&quot; &quot;ml&quot; &quot;lux&quot;, celui-ci est librement entrée par l'utilisateur</li>
+<li><strong>Unit</strong>: Unité propre à ce type de capteur, par exemple &quot;°C&quot; &quot;ml&quot; &quot;lux&quot;, celui-ci est librement entré par l'utilisateur</li>
 </ul>
 </li>
 <li><u class="jop-noMdConv"> <strong>Station</strong> </u>: Table des stations

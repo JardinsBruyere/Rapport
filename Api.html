@@ -439,11 +439,28 @@
 				.joplin-checklist li:not(.checked)::before {
 					content:"\f0c8";
 				}
-.mermaid { background-color: white; width: 640px; }</style><div id="rendered-md"><p>→<a data-from-md title='index.html' href='index.html'>Retour au menu ici</a>←</p>
+.mermaid { background-color: white; width: 640px; }</style><div id="rendered-md"><style class="jop-noMdConv">
+	H1,H2,H3,img { 
+		text-align: center;
+		text-decoration: underline;
+	}
+	img{
+		 display: block;
+		 margin-left: auto;
+  		margin-right: auto;
+	}
+	tr,td{
+		text-align:center;;
+	}
+	p{
+		font-family: Georgia;
+	}
+</style>
+<p>→<a data-from-md title='index.html' href='index.html'>Retour au menu ici</a>←</p>
 <h1 id="présentation-sommaire-de-lapi">Présentation sommaire de l'api</h1>
 <p>L'api s'appuie sur un script en python et utilise le micro-framework flask ainsi que sqlite3<br>
-Pour rappel, un serveur rest se comportera de cette manière:<img src="pic/0db81cd01f3e4bca9fa73b5966582248.png" alt="5c8096085d6e7ec0c2223d24a5685bbf.png"><br>
-Dans un 1er temps un site web ou une application mobile fera une requete spécifique vers celui-ci contenant tout d'abord son ip, ainsi que le chemin souhaité, puis enfin les différents paramètres nécessaire. Dans un second temps le serveur enverra une réponse sous format json contenant toute les informations correspondant à cette requete.</p>
+Pour rappel, un serveur rest se comportera de cette manière:<img src="../_resources/fcf8e12d217f440e8f422bedc15cb4c0.png" alt="5c8096085d6e7ec0c2223d24a5685bbf.png"><br>
+Dans un premier temps un site web ou une application mobile fera une requête spécifique vers celui-ci contenant tout d'abord son ip, ainsi que le chemin souhaité, puis enfin les différents paramètres nécessaires. Dans un second temps le serveur enverra une réponse sous format json contenant toute les informations correspondant à cette requête.</p>
 <h1 id="interface-dutilisation">Interface d'utilisation</h1>
 <p>Liste des interfaces disponibles :</p>
 <table>
@@ -458,15 +475,15 @@ Dans un 1er temps un site web ou une application mobile fera une requete spécif
 <tbody>
 <tr>
 <td>/api/nbCapteur</td>
-<td>Permet de récupérer le nombre de capteur disponible dans les relevés</td>
+<td>Permet de récupérer le nombre de capteurs disponibles dans les relevés</td>
 <td>0</td>
-<td>1 entier contenant le nombre de capteur</td>
+<td>Un entier contenant le nombre de capteur</td>
 </tr>
 <tr>
 <td>/api/addStation</td>
 <td>Ajoute automatiquement une station par défaut</td>
 <td>0</td>
-<td>OK si la station a correctement été ajouté sinon KO</td>
+<td>OK si la station a correctement été ajoutée sinon KO</td>
 </tr>
 <tr>
 <td>/api/addType</td>
@@ -494,9 +511,9 @@ Dans un 1er temps un site web ou une application mobile fera une requete spécif
 </tr>
 <tr>
 <td>/api/listeTable</td>
-<td>Créer une liste contenant le nom des différentes tables disponible sur le serveur</td>
+<td>Créée une liste contenant le nom des différentes tables disponible sur le serveur</td>
 <td>0</td>
-<td>Liste de string représentant dans l'ordre le nom de chaque table</td>
+<td>Liste de strings représentant dans l'ordre le nom de chaque table</td>
 </tr>
 <tr>
 <td>/api/capteur</td>
@@ -508,12 +525,12 @@ Dans un 1er temps un site web ou une application mobile fera une requete spécif
 <td>/api/meteo/</td>
 <td>Relevés météo</td>
 <td>0</td>
-<td>Renvoi une liste des différents relevés météo</td>
+<td>Renvoie une liste des différents relevés météo</td>
 </tr>
 </tbody>
 </table>
 <h3 id="comportement-spécial-du-chemin-apichange">Comportement spécial du chemin <u class="jop-noMdConv"> /api/change</u>:</h3>
-<p>Voyons ici quels sont les paramètres de ce chemin :</p>
+<p>Voyons ici les paramètres de ce chemin :</p>
 <table>
 <thead>
 <tr>
@@ -545,12 +562,12 @@ Dans un 1er temps un site web ou une application mobile fera une requete spécif
 </tr>
 </tbody>
 </table>
-<p>Ce chemin est très utile car il permet directement de modifier la base de donnée via l'API et de normaliser son accès sans faire de requête SQL.</p>
+<p>Ce chemin permet de directement modifier la base de donnée via l'API et de normaliser son accès sans faire de requête SQL.</p>
 <h3 id="comportement-spécial-du-chemin-apicapteurs">Comportement spécial du chemin <u class="jop-noMdConv"> /api/capteurs</u> :</h3>
 <ul>
 <li>
 <p>Si la valeur de table est différente différent de 3:</p>
-<p>Renvoi le contenu de la table formaté</p>
+<p>Renvoie le contenu de la table formaté</p>
 </li>
 <li>
 <p>Si la valeur de la table est 3<br>
@@ -601,7 +618,7 @@ Alors devrons passer au minimum le paramètre sensorid et amount afin de récup�
 </tbody>
 </table>
 <p>Exemple : /api/capteur?numTable=<strong>3</strong>&amp;sensorid=<strong>1</strong>&amp;amount=<strong>10</strong>&amp;startdate=<strong>1579474800</strong>&amp;enddate=<strong>2526937200</strong></p>
-<p>Ici nous demandons les relevés du capteur (car nous demandons la 1ere table) numéro 1 avec 10 relevés au maximum. Les relevés serons mis sous forme de liste et envoyer sous format json. Chaque valeur aura la structure suivante :</p>
+<p>Ici nous demandons les relevés du capteur (car nous demandons la 1ere table) numéro 1 avec 10 relevés au maximum. Les relevés seront mis sous forme de liste et envoyés sous format json. Chaque valeur aura la structure suivante :</p>
 <div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">{
   &quot;DateAdded&quot;: &quot;2022-01-01 00:00:00&quot;, 
   &quot;Id&quot;: 1, 

@@ -5,10 +5,10 @@
 						<meta charset="UTF-8">
 						<meta name="viewport" content="width=device-width, initial-scale=1" />
 						<link rel="stylesheet" href="pluginAssets/katex/katex.css"><script type="application/javascript" src="pluginAssets/mermaid/mermaid.min.js"></script><script type="application/javascript" src="pluginAssets/mermaid/mermaid_render.js"></script><link rel="stylesheet" href="pluginAssets/highlight.js/atom-one-light.css">
-						<title>Mobile</title>
+						<title>Hardware</title>
 					</head>
 					<body>
-						<div class="exported-note"><div class="exported-note-title">Mobile</div>
+						<div class="exported-note"><div class="exported-note-title">Hardware</div>
 
 <style>
 		/* https://necolas.github.io/normalize.css/ */
@@ -439,7 +439,8 @@
 				.joplin-checklist li:not(.checked)::before {
 					content:"\f0c8";
 				}
-.mermaid { background-color: white; width: 640px; }</style><div id="rendered-md"><style class="jop-noMdConv">
+.mermaid { background-color: white; width: 640px; }</style><div id="rendered-md"><p>→<a data-from-md title='index.html' href='index.html'>Retour au menu ici</a>←</p>
+<style class="jop-noMdConv">
 	H1,H2,H3,img { 
 		text-align: center;
 		text-decoration: underline;
@@ -456,61 +457,129 @@
 		font-family: Georgia;
 	}
 </style>
-<p>→<a data-from-md title='index.html' href='index.html'>Retour au menu ici</a>←</p>
-<h2 id="description-générale">Description générale</h2>
-<p>L'application mobile est découpée en 6 parties accessibles depuis un menu présent en haut à gauche de l'écran : <img src="../_resources/da1bb6288d0e4f099a58201985c55908.png" alt="8b4905f570cc0b529aef77b12972a339.png"><br>
-L'objectif de cette application mobile est uniquement de récupérer les données du serveur afin de les afficher sous forme de courbe.</p>
-<p>Nous allons ici détailler le comportement des différents écrans.</p>
-<h2 id="home">Home</h2>
-<p>Sur ce menu d'accueil nous pouvons modifier l'ip utiliser pour se connecter au serveur en [1]. Cette nouvelle ip sera modifiée quand nous appuirons sur le bouton &quot;CHANGER&quot; [2] ce qui affichera un message pour nous notifier du changement [3]. Enfin nous pouvons mettre à jour les données locales soit des tables (capteur, types, stations) [4] soit des relevés des capteurs [5]. A chaque fois que nous demandons  un rafraîchissement des données locales, cela supprimera tout d'abord toutes les données locales qui seront ensuite rechargées.<br>
-<img src="../_resources/0be307af29dd450f899e723f027c81ab.png" alt="cfd4de8f6cd474f594211ba92d4cf77f.png"></p>
-<h2 id="capteurs">Capteurs</h2>
-<p>L'écran des capteurs permet de consulter les liste des capteurs disponibles. Dans la première colonne nous avons l'id du capteur, puis son nom et enfin la date d'ajout.</p>
-<p><img src="../_resources/732ffb6aeaab4d628bcb07238e2a8b73.png" alt="3252dbab5f95b4b7d2ae7df52c595df6.png"></p>
-<h2 id="types-de-capteurs">Types de capteurs</h2>
-<p><img src="../_resources/ba6224b6b98941d1bfd408862dcbb63c.png" alt="e19b23abd3241a9ae4ce5325cfc4492f.png"></p>
-<h2 id="données">Données</h2>
-<p>Nous trouverons ici la liste des différents relevés:</p>
-<p><img src="../_resources/ebd1cbc195fe4e1da79f2fc55dd6ae9d.png" alt="a543ee5d87bc427de75dcd1b2272ffa2.png"></p>
-<h2 id="graphiques">Graphiques</h2>
-<p>Dans un premier temps nous avons la liste des capteurs que nous pouvons cocher, ici par exemple nous avons cocher les cases pour les capteurs 2 et 3.</p>
-<p><img src="../_resources/65c4443c92c54f37b22cf097f2ff2dd7.png" alt="a208b95d9e0e517e75cc2b6862cb253b.png"></p>
-<p>Une fois que nous avons fais nos choix nous pouvons cliquer sur &quot;ajouter&quot; qui génèrera un graphe à partir des données des capteurs que nous avons sélectionnés.</p>
-<p><img src="../_resources/05abe7e892d647dfbbcd9aabcfedc07b.png" alt="b9dfe04b94b137308bff7ed4721dd4be.png"><br>
-<img src="../_resources/dcf42c8db01b46538dd7f31f1a32ae1f.png" alt="ea76274e4d718bbe310f547b287faf70.png"></p>
-<p>Sur le graphique nous voyons en haut les différentes dates des relevés, en bas une légende puis un bouton permettant de télécharger le graphique dans la mémoire du téléphone. Nous pouvons zoomer sur le graphe et les indicateurs d'ordonnées ou d'abscisses seront automatiquement remis à jour:<br>
-<img src="../_resources/98d2408825a54ac3aa489095af2136f9.png" alt="aa372a4d19b7bf6ae244d08cf5be98e7.png"></p>
-<p>Enfin quand nous passons notre doigt à une endroit précis du graphe nous avons des information sur ce point:<br>
-<img src="../_resources/9d5af54e8e9145e8a3c7c692e126c834.png" alt="83b710c8de814b341209ef83afa34235.png"></p>
-<h2 id="a-propos">A propos</h2>
-<p>Cet écran décrit le projet ainsi que son contexte et sera amené à évoluer au cours du temps selon les mises à jour et fonctionnalités ajoutées.</p>
-<h1 id="partie-technique">Partie technique</h1>
-<h2 id="base-de-donnée">Base de donnée</h2>
-<p>Nous avons une base de données qui suis le modèle Room de google, celui-ci se décompose en plusieurs parties comme nous pouvons le voir ici par exemple avec les capteurs :<br>
-<img src="../_resources/94f87cb747804646b9cd386b995a8b1b.png" alt="46c876e69b31f23225d74ae165a02140.png"></p>
-<h2 id="connection-à-lapi">Connection à l'API</h2>
-<p>Pour se connecter à l'API présente sur le serveur nous utilsons un module retrofit qui réalise directement les call api que nous demandons. Nous voyons ici les différents appels possibles à l'api :<br>
-<img src="../_resources/82c6b35eb3254a918e8e42ece4de0006.png" alt="aa131218785c30788fc73db6ab15f617.png"><br>
-Ainsi lorsque nous voulons faire un appel à l'api nous pouvons simplement appeller la méthode correspondante à l'appel voulu pour récupérer le contenu de la réponse envoyé par le serveur.</p>
-<h2 id="graphique">Graphique</h2>
-<p>Pour générer le graphique nous avons décider d'utiliser le projet github de <a data-from-md title='https://github.com/PhilJay' href='https://github.com/PhilJay'>Philipp Jahoda</a> que nous pouvons trouver <a data-from-md title='https://github.com/PhilJay/MPAndroidChart' href='https://github.com/PhilJay/MPAndroidChart'>ici</a><br>
-Pour l'instant nous avons utilisé uniquement le type de graphe &quot;basic&quot; mais nous pourrons très bien utiliser d'autres types de graphes car cette librairie est très complete et simple d'utilisation.</p>
-<h1 id="bilan">Bilan</h1>
-<h2 id="actuellement">Actuellement</h2>
-<p>L'application est fonctionnelle et une base solide pour visualiser les relevés sous forme de graphique depuis le serveur. Ainsi nous avons toutes les composantes nécessaires à savoir :</p>
-<ul>
-<li>Stockage des données en base de données</li>
-<li>Communication avec l'API</li>
-<li>Génération de graphique</li>
-</ul>
-<h2 id="améliorations-possibles">Améliorations possibles</h2>
-<p>Maintenant que nous avons une base solide sur l'application mobile nous pourrons perfectionner et ajouter des fonctionnalités:</p>
-<ul>
-<li>Ajout de plusieurs type de graphes</li>
-<li>Meilleure gestion de la base de données par l'utlisateur</li>
-<li>Plus d'informations relatives aux données</li>
-<li>Personnalisation de l'environnement</li>
-</ul>
+<h1 id="informations-hardware">Informations Hardware</h1>
+<h2 id="modulabilité">Modulabilité</h2>
+<p>La station est conçue pour être modulable, et peut être programmée de sorte à utiliser différents protocoles pour communiquer avec divers capteurs.<br>
+L'interface de capteurs universelle <a data-from-md title='https://github.com/adafruit/Adafruit_Sensor' href='https://github.com/adafruit/Adafruit_Sensor'><em>Adafruit Unified Sensor Driver</em></a> est utilisée pour faciliter l'implémentation d'autres capteurs pour ceux qui le souhaitent.<br>
+Nous avons à ce titre utilisé le microcontrôleur ESP32, paticulièrement réputé pour sa basse consommation, son prix réduit et son vaste arsenal de GPIO's.</p>
+<p>Afin de faciliter les connectiques, il est recommandé d'utiliser une carte breakout barebone ou une carte de développement modifiée tel que la carte ESP32-DevKitC.</p>
+<table>
+<thead>
+<tr>
+<th>ESP32 breakout board</th>
+<th>ESP32-DevKitC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../_resources/2faa19c8c1724916987c339c3c115b41.png" width="100%" class="jop-noMdConv"/></td>
+<td><img src="../_resources/c8eb5501bd9a403c9a4125c01a64124e.png" width="75%" class="jop-noMdConv"/></td>
+</tr>
+</tbody>
+</table>
+<h2 id="capteurs-utilisés">Capteurs utilisés</h2>
+<p>Voici trois capteurs low-costs approuvés pour l'utilisation dans la station.</p>
+<p>Capacitive Soil Moisture Sensor v1.2 /v2.0*<br>
+<img src="../_resources/5d7eace9c14e4cdbbd95da74737c671c.png" width="50%" class="jop-noMdConv"/><br>
+*note : Attention aux clones nombreux. Certains ne fonctionnent pas correctement, ou nécessitent une tension supérieure à 3.3V.</p>
+<p>SHT3X<br>
+<img src="../_resources/98a5a335e2624faba6338c5bd0019938.png" width="50%" class="jop-noMdConv"/></p>
+<p>TCS3472<br>
+<img src="../_resources/d6e85a491b4548eb9e40304e62a2f38f.png" width="50%" class="jop-noMdConv"/></p>
+<p>Informations supplémentaires</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Type</th>
+<th>Protocole</th>
+<th>Tension</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capacitive Soil Moisture Sensor v1.2 /v2.0</td>
+<td>Humidité dans le sol</td>
+<td>Signal analogique</td>
+<td>3.3V</td>
+</tr>
+<tr>
+<td>SHT3X</td>
+<td>Humidité ambiante &amp; température ambiante</td>
+<td>I2C</td>
+<td>3.3V</td>
+</tr>
+<tr>
+<td>TCS3472</td>
+<td>Capteur de luminosité RGB</td>
+<td>I2C</td>
+<td>3.3V</td>
+</tr>
+</tbody>
+</table>
+<h2 id="consommation-électrique">Consommation électrique</h2>
+<p>Etant donné que la station fonctionne primairement sur batteries, diverses stratégies ont été envisagées pour réduire la consommation de celle-ci.</p>
+<h3 id="deep-sleep">Deep sleep</h3>
+<p>La base de la longévité de la station reposera sur la fonction deep sleep de l'ESP32, qui plonge régulièrement le processeur dans un sommeil réduisant considérablement sa consommation énergétique. Un compromis entre consommation énergétique et taux de rafraîchissment peut être configuré en modifiant la durée du deep sleep.</p>
+<h3 id="activation-individuelle-des-capteurs">Activation individuelle des capteurs</h3>
+<p>En général, les modules sont connectés à un rail de 3.3V ou 5V pour les alimenter en courant. Afin d'éviter que ces modules consomment de l'énergie en dehors de leur durée d'utilisation, nous pouvons connecter les pins d'alimentation à une sortie GPIO pour les activer individuellement.<br>
+Etant donné le nombre imposant de GPIO de l'ESP32, cela ne constitue pas de problème sur le plan de connectiques disponibles. Il faut cependant retenir que la tension de sortie 3.3V des GPIO ne peut pas alimenter de capteurs 5V.<br>
+<strong>ATTENTION :</strong> Les GPIO de l'ESP32 sont réservés pour des signaux logiques, et non l'alimentation de composants. La nature peu énergivore des capteurs autorise une telle utilisation, mais une bonne pratique imposerait l'utilisation d'un transistor adéquat.</p>
+<h3 id="désactivation-des-composants-non-utilisés">Désactivation des composants non utilisés</h3>
+<p>Certaines cartes de développement, comme la carte ESP32-DevKitC, possèdent quelques modules intégrés pour simplifier le téléversement, réguler l'alimentation de la carte ou encore afficher divers évènements (notamment les leds). Certains modules ne peuvent pas être désactivés et continuent de consommer durant le deep sleep. Ces modules consomment relativement peu d'énergie, mais cette consommation devient considérable au long terme.<br>
+Pour limiter ces pertes, il suffit de les séparer de la carte ou d'utiliser directement une ESP32 sans carte de développment.</p>
+<h3 id="suppression-du-régulateur">Suppression du régulateur</h3>
+<p>Le microcontrôleur ESP32 peut fonctionner sur une tension d'entrée de 2.2V à 3.6V. Une tension en dehors de cette plage provoquera l'arrêt ou endommagera le microcontrôleur. La plupart des cartes intègrent un régulateur de tension pour convertir les 5V fournis en 3.3V que l'ESP32 peut utiliser.<br>
+Ces régulateurs sont un drain majeur d'énergie, car ils dissipent l'excès en chaleur.</p>
+<h3 id="choix-de-la-batterie">Choix de la batterie</h3>
+<p>Il existe un grand choix de batteries possible pour alimenter les projets IOT. Nous avons distingué quelques catégories aptes à l'installation dans notre station :</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Tension / cellule AA</th>
+<th>Capacité / cellule AA</th>
+<th>Auto décharge</th>
+<th>Rechargeable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low self-discharge NiMH</td>
+<td>0.9V - 1.5V</td>
+<td>~2800 mAh</td>
+<td>~0.25% par mois</td>
+<td>oui</td>
+</tr>
+<tr>
+<td>Nickel–metal hydride (NiMH)</td>
+<td>0.9V - 1.5V</td>
+<td>~2800 mAh</td>
+<td>~30% par mois</td>
+<td>oui</td>
+</tr>
+<tr>
+<td>Lithium-polymer (LiPo)</td>
+<td>3.2V - 4.2V</td>
+<td>~3000mAh</td>
+<td>~5% par mois</td>
+<td>oui</td>
+</tr>
+<tr>
+<td>Lithium iron phosphate (LiFePO4)</td>
+<td>2.5V - 3.65V</td>
+<td>~600mAh</td>
+<td>~3% par mois</td>
+<td>oui</td>
+</tr>
+</tbody>
+</table>
+<p>Nous avons décidé d'opter pour les cellules LiFePO4. Au premier regard, ce choix semble peut-être contre intuitif étant donné que les autres batteries proposent une capacité cinq fois plus importante. Cependant, la tension par cellule correspondant <em>quasiment</em> à la tension d'alimentation de l'ESP32 nous permet d'éviter d'utiliser un régulateur de tension sans pour autant suralimenter le microcontrôleur.<br>
+D'autes caractéristiques, comme le profil de déchargement énergétique exceptionnellement stable et la sécurité de la batterie en cas d'incident.</p>
+<p>Profil de déchargement d'une batterie LiFePO4.<br>
+<img src="../_resources/97cfcd91477946f09cedba941bafc67a.png" width="75%" class="jop-noMdConv"/></p>
+<h3 id="désactivation-du-second-coeur-de-lesp32">Désactivation du second coeur de l'ESP32</h3>
+<p>Ironiquement, le processeur dual-core Xtensa intégré au microcontrôleur est bien plus puissant que nécessite notre programme. Nous pouvons alors nous permettre de désactiver l'un des deux coeurs afin d'en réduire légèrement la consommation.</p>
 </div></div>
 					</body>
 				</html>

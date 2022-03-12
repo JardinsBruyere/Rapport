@@ -440,26 +440,71 @@
 					content:"\f0c8";
 				}
 .mermaid { background-color: white; width: 640px; }</style><div id="rendered-md"><style class="jop-noMdConv">
-	H1,H2,H3,img { 
-		text-align: center;
-		text-decoration: underline;
+	.exported-note-title{
+		background: #008000;
+		border-radius: 6px 6px 6px 6px;
+		box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+		color: #FFFFFF;
+		Font family: "Microsoft YaHei", "Tahoma", "boldface", Arial;
+		font-size: 18px;
+		font-weight: bold;
+		height: 25px;
+		line-height: 25px;
+		margin: 18px 0 !important;
+		padding: 8px 0 5px 5px;
+		text-shadow: 2px 2px 3px #222222;
 	}
-	img{
-		 display: block;
-		 margin-left: auto;
-  		margin-right: auto;
-	}
-	tr,td{
-		text-align:center;;
-	}
-	p{
-		font-family: Georgia;
-	}
+p,li,lu{
+    color: black;
+    Font: 0.875em/1.5em "Microsoft YaHei", "ptsans", "Arial", sans serif;
+    font-size: 16px;
+}
+h1 {
+    background: #87CEFA;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+    color: #FFFFFF;
+    Font family: "Microsoft YaHei", "Tahoma", "boldface", Arial;
+    font-size: 18px;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    margin: 18px 0 !important;
+    padding: 8px 0 5px 5px;
+    text-shadow: 2px 2px 3px #222222;
+}
+h2 {
+    background: #CD5C5C;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+    color: #FFFFFF;
+    Font family: "Microsoft YaHei", "Tahoma", "boldface", Arial;
+    font-size: 15px;
+    font-weight: bold;
+    height: 24px;
+    line-height: 23px;
+    margin: 12px 0 !important;
+    padding: 5px 0 5px 10px;
+    text-shadow: 2px 2px 3px #222222;
+}
+h3 {
+    background: #5B9600;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+    color: #FFFFFF;
+    Font family: "Microsoft YaHei", "Tahoma", "boldface", Arial;
+    font-size: 13px;
+    font-weight: bold;
+    height: 24px;
+    line-height: 20px;
+    margin: 12px 0 !important;
+    padding: 5px 0 5px 10px;
+    text-shadow: 2px 2px 3px #222222;
 </style>
 <p>→<a data-from-md title='index.html' href='index.html'>Retour au menu ici</a>←</p>
 <h1 id="présentation-sommaire-de-lapi">Présentation sommaire de l'api</h1>
 <p>L'api s'appuie sur un script en python et utilise le micro-framework flask ainsi que sqlite3<br>
-Pour rappel, un serveur rest se comportera de cette manière:<img src="pic/fcf8e12d217f440e8f422bedc15cb4c0.png" alt="5c8096085d6e7ec0c2223d24a5685bbf.png"><br>
+Pour rappel, un serveur rest se comportera de cette manière:<img src="../_resources/8aae67f803c44a25b4b930b9f3c2c547.png" alt="5c8096085d6e7ec0c2223d24a5685bbf.png"><br>
 Dans un premier temps un site web ou une application mobile fera une requête spécifique vers celui-ci contenant tout d'abord son ip, ainsi que le chemin souhaité, puis enfin les différents paramètres nécessaires. Dans un second temps le serveur enverra une réponse sous format json contenant toute les informations correspondant à cette requête.</p>
 <h1 id="interface-dutilisation">Interface d'utilisation</h1>
 <p>Liste des interfaces disponibles :</p>

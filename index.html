@@ -440,21 +440,66 @@
 					content:"\f0c8";
 				}
 .mermaid { background-color: white; width: 640px; }</style><div id="rendered-md"><style class="jop-noMdConv">
-	H1,H2,H3,img { 
-		text-align: center;
-		text-decoration: underline;
+	.exported-note-title{
+		background: #008000;
+		border-radius: 6px 6px 6px 6px;
+		box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+		color: #FFFFFF;
+		Font family: "Microsoft YaHei", "Tahoma", "boldface", Arial;
+		font-size: 18px;
+		font-weight: bold;
+		height: 25px;
+		line-height: 25px;
+		margin: 18px 0 !important;
+		padding: 8px 0 5px 5px;
+		text-shadow: 2px 2px 3px #222222;
 	}
-	img{
-		 display: block;
-		 margin-left: auto;
-  		margin-right: auto;
-	}
-	tr,td{
-		text-align:center;;
-	}
-	p{
-		font-family: Georgia;
-	}
+p,li,lu{
+    color: black;
+    Font: 0.875em/1.5em "Microsoft YaHei", "ptsans", "Arial", sans serif;
+    font-size: 16px;
+}
+h1 {
+    background: #87CEFA;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+    color: #FFFFFF;
+    Font family: "Microsoft YaHei", "Tahoma", "boldface", Arial;
+    font-size: 18px;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    margin: 18px 0 !important;
+    padding: 8px 0 5px 5px;
+    text-shadow: 2px 2px 3px #222222;
+}
+h2 {
+    background: #CD5C5C;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+    color: #FFFFFF;
+    Font family: "Microsoft YaHei", "Tahoma", "boldface", Arial;
+    font-size: 15px;
+    font-weight: bold;
+    height: 24px;
+    line-height: 23px;
+    margin: 12px 0 !important;
+    padding: 5px 0 5px 10px;
+    text-shadow: 2px 2px 3px #222222;
+}
+h3 {
+    background: #5B9600;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+    color: #FFFFFF;
+    Font family: "Microsoft YaHei", "Tahoma", "boldface", Arial;
+    font-size: 13px;
+    font-weight: bold;
+    height: 24px;
+    line-height: 20px;
+    margin: 12px 0 !important;
+    padding: 5px 0 5px 10px;
+    text-shadow: 2px 2px 3px #222222;
 </style>
 <h2 id="rapport-temporaire-sur-lavancement-du-cap-projet">Rapport temporaire sur l'avancement du cap projet</h2>
 <p>Le github contenant l'ensemble des codes sources est dispo <a data-from-md title='https://github.com/JardinsBruyere' href='https://github.com/JardinsBruyere'>ici</a></p>
@@ -468,7 +513,7 @@
 </ul>
 <h1 id="synthèse">Synthèse</h1>
 <h2 id="architechture">Architechture</h2>
-<p><img src="pic/740b49c69dc04502b7d955aa1421e22a.png" alt="310acd07b20d5212a2613677a8802956.png"></p>
+<p><img src="../_resources/168b602706354bdfa04ab3d5679e4fb3.png" alt="310acd07b20d5212a2613677a8802956.png"></p>
 <h2 id="résumé-du-fonctionnement-général">Résumé du fonctionnement général</h2>
 <p>Dans un premier temps le microcontrôleur récupère les valeurs des capteurs qu'il formate sous forme de JSON pour les envoyer à la partie listener du serveur. Le serveur sauvegarde ensuite les informations dans la base de donnée. Le serveur possède une interface d'API permettant de mettre à disposition les données pour le site web et l'application mobile.<br>
 Le site web permet de consulter et visualiser les données ou bien les modifier. L'application mobile permet quant à elle uniquement de visualiser les données.</p>
